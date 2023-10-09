@@ -1,19 +1,13 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+
 # frontend
-./league-app-frontend/node_modules/.
-./league-app-frontend/.pnp
-./league-app-frontend/.pnp.js
-
-#backend
-./league-app-backend/node_modules/.
-./league-app-backend/.pnp.js
-
 /league-app-frontend/node_modules/
 /league-app-frontend/.env
 /league-app-frontend/build/
 
+#backend
 /league-app-backend/node_modules/
 /league-app-backend/.env
 /league-app-backend/dist/
