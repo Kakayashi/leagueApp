@@ -1,0 +1,26 @@
+@use "../../assets/mixin.scss";
+
+.button{
+    background-color: mixin.$color-red;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: mixin.$bold;
+    cursor: pointer;
+    transition: 0.3s all;
+
+    &:hover{
+        background-color: mixin.$color-red-hover;
+    }
+
+    &__findSummoner{
+        @include mixin.font-size(+16px);
+        padding: 14px 20px;
+        //margin-left: -110px;
+        z-index: 20;
+
+    }
+}

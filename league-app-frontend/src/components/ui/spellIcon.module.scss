@@ -1,0 +1,51 @@
+@use '../../assets/mixin.scss';
+
+.spellIcon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    margin-top: 50px;
+    margin-inline: 10px;
+
+    img{
+        transition: 0.2s all;
+        width: 80px;
+    }
+
+    span{
+        transition: 0.2s all;
+        max-width: 80px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    &__selected{
+        img{
+            box-shadow: 0px 4px 20px 20px #111111;  
+        }  
+        span{
+            color: mixin.$color-red;
+            font-weight: 600;
+        }
+    }
+
+    &:hover{
+
+        img{
+            box-shadow: 0px 4px 20px 20px #111111;    
+        }
+
+        span{
+            color: mixin.$color-red;
+        }
+    }
+
+    @include mixin.mobile{
+        margin-inline: 5px;
+        img{
+            width: 60px;
+        }
+    }
+}

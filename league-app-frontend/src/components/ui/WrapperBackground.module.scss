@@ -1,0 +1,26 @@
+@use "../../assets/mixin.scss";
+
+body{
+    background-image: mixin.$drawBackground;
+
+    a{
+        color: #fff;
+        text-decoration: none;
+        
+    }
+}
+
+.wrapper{
+    width: 100%;
+    height: auto;
+    color: #fff;
+}
+
+.content{
+    width: 1440px;
+    margin-inline: auto;
+
+    @include mixin.laptop-and-down{
+        width: 100%;
+    }
+}

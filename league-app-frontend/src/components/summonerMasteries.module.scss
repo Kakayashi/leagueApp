@@ -1,0 +1,40 @@
+@use "../assets/mixin.scss";
+
+.summonerMasteriesWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;    
+}
+
+.masteriesItems{
+    background-color: #111;
+    box-shadow: 0px 2px 10px 10px #111111;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    width: 250px;
+    height: 100%;
+
+    h3{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+}
+
+.summonerItem{
+    display: flex;
+    gap: 20px;
+    img{
+        width: 60px;
+        border-radius: 6px;
+    }
+    margin-bottom: 40px;
+}
+
+.maestryInfo{
+    display: flex;
+    flex-direction: column;
+}

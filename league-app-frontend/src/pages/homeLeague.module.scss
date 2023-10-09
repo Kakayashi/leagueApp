@@ -1,0 +1,10 @@
+@use "../assets/mixin.scss" as mixin;
+
+.wrapper{
+    color: red;
+}
+
+.background{
+    background-image: mixin.$drawBackground;
+    height: 100vw;
+}

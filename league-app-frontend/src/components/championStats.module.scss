@@ -1,0 +1,53 @@
+@use "../assets/mixin.scss";
+
+.statsWrapper{
+    h2{
+        color: mixin.$color-red;
+        @include mixin.font-size(+30px);
+        margin: 0;
+        margin-top: 20px;
+        margin-left: 40px;
+    
+        @include mixin.mobile{
+            @include mixin.font-size(+20px);
+        }
+    }
+}
+
+.statsTable{
+    @include mixin.font-size(+14px);
+    border: 4px solid #111;
+    width: 500px;
+    margin-inline: auto;
+
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__rowTitle{
+        color: mixin.$color-red;
+        padding-right: 10px;
+        border-right: 4px solid #111;
+        padding: 6px;
+        width: 68%;
+        text-align: center;
+        border-bottom: 4px solid #111;
+    }
+
+    &__rowData{
+        padding: 6px;
+        text-align: center;
+        width: 40%;
+        border-bottom: 4px solid #111;
+
+    }
+
+    @include mixin.mobile{
+        @include mixin.font-size(+8px);
+        width: 340px;
+
+    }
+}

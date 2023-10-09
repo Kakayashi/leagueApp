@@ -1,0 +1,23 @@
+@use '../../assets/mixin.scss';
+
+.navLink{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mixin.font-size(+6px);
+    transition: 0.1s ease-out;
+    padding-inline: 20px;
+
+    &:hover{
+        color:mixin.$color-red ;
+        border-bottom: 5px solid mixin.$color-red;
+    }
+
+    @include mixin.mobile{
+        display:none;
+    }
+}

@@ -1,0 +1,26 @@
+@use "../assets/mixin.scss";
+
+.navbar{
+    background-color: mixin.$color-black;
+    color: #fff;
+    padding-inline: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 2px 12px 7px #111;
+    z-index: 2;
+    position: relative;
+
+    h1{
+        margin: 0;
+        margin-right: 30px;
+    }
+
+    &_list{
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+}

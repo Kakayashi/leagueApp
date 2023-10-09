@@ -1,0 +1,43 @@
+@use "../../assets/mixin.scss";
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    cursor: pointer;
+    font-weight: mixin.$bold;
+
+    img{
+        width: 200px;
+        height: 330px;
+        transition: 0.2s all;
+    }
+
+    span{
+        text-align: center;
+        @include mixin.font-size(+14px);
+        transition: 0.2s all;
+    }
+
+    &:hover{
+
+        img{
+            box-shadow: 0px 4px 20px 20px #111111;    
+        }
+
+        span{
+            color: mixin.$color-red;
+        }
+    }
+
+    @include mixin.mobile-tablet{
+        img{
+            width: 120px;
+            height: 185px;
+        }
+
+        span{
+            @include mixin.font-size(+4px);
+        }
+    }
+}

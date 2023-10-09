@@ -1,0 +1,237 @@
+@use "../assets/mixin.scss";
+
+.gameWrapper{
+    background-color: #111;
+    margin-top: 40px;
+    box-shadow: 0px 0px 10px 10px #111111;
+
+    h2{
+        @include mixin.font-size(+20px);
+        margin-left: 40px;
+        padding-top: 20px;
+    }
+}
+
+.gameTable{
+    display: flex;
+    flex-direction: column;
+    height: 520px;
+    flex-wrap: wrap;
+    margin: 20px 40px;
+    border: 2px solid #000;
+
+    &__item{
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        border: 2px solid #000;
+        align-items: center;
+        position: relative;
+
+        img{
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+            padding-left: 10px;
+
+        }
+
+        @media (max-width: 1400px){
+            img{
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @include mixin.mobile{
+            height: auto;
+            width: auto;
+            flex-wrap: wrap;
+            width: 90vw;
+            padding: 10px 0;
+        }
+
+    }
+
+    &__level{
+        position: absolute;
+        padding: 5px;
+        background-color: #000000a4;
+        border-radius: 100px;
+        left: 75px;
+        bottom: 0px;
+
+        @media (max-width: 1400px){
+            left: 46px;
+            bottom: 10px;
+        }
+    }
+
+
+    &__summonerSpell{
+        display: flex;
+        flex-direction: column;
+        height: 40px;
+        justify-content: center;
+        gap: 8px;
+        margin-left: 5px;
+
+        img{
+            width: 32px;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 1400px){
+            img{
+                width: 20px;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    &__summonerName{
+        margin-left: 5px;
+        width: 170px;
+        span{
+            @include mixin.font-size(+4px);
+            padding-inline:5px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.2s all;
+
+            &:hover{
+                padding-inline:5px ;
+                background-color: mixin.$color-blue;
+            }
+        }
+        p{
+            padding-inline:5px ;
+            margin: 0;
+            @include mixin.font-size(-2px);
+            color: mixin.$color-gray;
+        }
+
+        @media (max-width: 1400px){
+            width: 135px;
+            span{
+                @include mixin.font-size(+0px);
+            }
+            p{
+                @include mixin.font-size(-2px);
+            }
+        }
+    }
+
+    &__stats{
+        margin-left: 4px;
+        @include mixin.font-size(+8px);
+        span{
+            color: mixin.$color-red;
+        }
+
+        @media (max-width: 1400px){
+            margin-left: 4px;
+            @include mixin.font-size(+4px);
+        }
+    }
+
+    &__shopItems{
+        margin-top: 5px;
+        display: flex;
+    }
+
+    &__shopItem{
+        border: 2px solid black;
+        width: 35px;
+        height: 35px;
+
+        img{
+            width: 35px;
+            height: auto;
+            padding: 0;
+        }
+
+        @media (max-width: 1400px){
+            width: 25px;
+            height: 25px;
+            img{
+                width: 25px;
+            }
+        }
+    }
+
+    &__minions{
+        margin-left: 10px;
+        text-align: center;
+        color: mixin.$color-gray;
+        width: 50px;
+
+        span{
+            color: #fff;
+        }
+    }
+
+    @media (max-width: 1400px){
+        margin: 10px;
+    }
+
+
+    @media (max-width: 1000px){
+        height: auto;
+        border: none;
+        align-items: center;
+
+        &__item{
+            border: 2px solid black;
+            border-top: none;
+        }
+
+
+        &__item:first-child{
+            border-top: 4px solid black;
+        }
+        &__item:last-child{
+            border-bottom: 2px solid black;
+        }
+    }
+}
+
+.championImg{
+    cursor: pointer;
+    transition: 0.2s all;
+
+    &:hover{
+        box-shadow: 0 0 25px #000;
+    }
+}
+
+.teamBlue{
+    @include mixin.font-size(+12px);
+    color: mixin.$color-blue;
+    border-bottom: 2px solid black;
+    width: 506px;
+
+    @media (min-width: 1000px){
+        display: none;
+    }
+
+    @include mixin.mobile{
+        width: 90vw
+    }
+}
+
+.teamRed{
+    @include mixin.font-size(+12px);
+    color: mixin.$color-red;
+    margin-top: 10px;
+    border-bottom: 2px solid black;
+    width: 506px;
+
+    @media (min-width: 1000px){
+        display: none;
+    }
+
+    @include mixin.mobile{
+        width: 90vw
+    }
+}

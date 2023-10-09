@@ -1,0 +1,10 @@
+@use "../assets/mixin.scss";
+
+.summonerInfoWrapper{
+    display: flex;
+    flex-direction: row;
+
+    @include mixin.mobile-tablet{
+        flex-direction: column;
+    }
+}
