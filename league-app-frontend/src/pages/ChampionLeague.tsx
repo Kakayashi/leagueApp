@@ -50,18 +50,20 @@ function ChampionLeague() {
         <LeagueNavbar/>
         <BannerSmall text='Champion' />
         <WrapperBackground> 
-          {isLoading ? <h1>Loading...</h1> : <ChampionInfo champion={data} />}  
-          <div className={styles.iconWrapper}>
-            {isLoading ? <h1>Loading...</h1> : data.spells.map((spell:Spell,index:number)=><SpellIcon spellKey={spellName[index]} isSelected={sellectedSpell===spell} action={handleSetSellectedSpell} key={spell.name} spell={spell} />)}
-          </div>
-          <div className={styles.spellInfoWrapper} >
-            {!isLoading && <SpellInfo selectedSpell={sellectedSpell} championKey={data.key} />}
-          </div>
-          <div>
-            {!isLoading && <SkinsCarousel skins={data.skins} championId={data.id}/> }
-          </div>
-          <div>
-            {!isLoading && <ChampionStats stats={data.stats} /> }
+          <div className={styles.championWrapper} >
+            {isLoading ? <h1>Loading...</h1> : <ChampionInfo champion={data} />}  
+            <div className={styles.iconWrapper}>
+              {isLoading ? <h1>Loading...</h1> : data.spells.map((spell:Spell,index:number)=><SpellIcon spellKey={spellName[index]} isSelected={sellectedSpell===spell} action={handleSetSellectedSpell} key={spell.name} spell={spell} />)}
+            </div>
+            <div className={styles.spellInfoWrapper} >
+              {!isLoading && <SpellInfo selectedSpell={sellectedSpell} championKey={data.key} />}
+            </div>
+            <div>
+              {!isLoading && <SkinsCarousel skins={data.skins} championId={data.id}/> }
+            </div>
+            <div>
+              {!isLoading && <ChampionStats stats={data.stats} /> }
+            </div>
           </div>
         </WrapperBackground>
     </>

@@ -2,6 +2,78 @@
 
 .chartsWrapper{
     height: auto;
-    height: 400px;
+    height: 700px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
     color: #fff;
+    position: relative;
+
+    @include mixin.mobile{
+        height: auto;
+    }
 }
+
+.chartsCheckboxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    
+
+    label{
+        display: flex;
+        @include mixin.font-size(-1px);
+        color:rgba(255, 255, 255, 0.7) ;
+    }
+
+    @include mixin.mobile{
+        flex-direction: column;
+        width: 300px;
+        margin-left: 40px;
+        label{
+            width: 300px;
+        }
+
+    }
+}
+
+.chartLine{
+    position: absolute;
+    width: 95%;
+    border: 1px solid #000;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 46%;
+
+    &::before{
+        position: absolute;
+        top: -21px;
+        content: "Blue Team";
+        color: mixin.$color-blue;
+        @include mixin.font-size(-4px);
+    }
+
+    &::after{
+        position: absolute;
+        top: 2px;
+        content: "Red Team";
+        color: mixin.$color-red;
+        @include mixin.font-size(-4px);
+    }
+
+    @include mixin.mobile{
+        top: 53.5%;
+    }
+
+}
+
+.chart{
+    height: auto;
+    height: 700px;
+    color: #fff;
+    position: relative;
+    display: flex;
+    padding: 5px;
+}
+

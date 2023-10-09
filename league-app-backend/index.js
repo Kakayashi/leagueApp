@@ -129,7 +129,7 @@ app.get('/getGame/:gameId/:region', async(req, res) =>{
   console.log('region', getRegion(region))
 
   try {    
-    const gameResponse = await axios.get(`https://europe.api.riotgames.com/lol/match/v5/matches/EUN1_3463361776`,config);
+    const gameResponse = await axios.get(`https://europe.api.riotgames.com/lol/match/v5/matches/${gameId}`,config);
     
     console.log('first', gameResponse);
     res.json(gameResponse.data);

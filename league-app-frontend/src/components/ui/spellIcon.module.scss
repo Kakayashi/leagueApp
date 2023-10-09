@@ -23,7 +23,7 @@
 
     &__selected{
         img{
-            box-shadow: 0px 4px 20px 20px #111111;  
+            box-shadow: 0px 4px 20px 20px #000;  
         }  
         span{
             color: mixin.$color-red;
@@ -34,7 +34,7 @@
     &:hover{
 
         img{
-            box-shadow: 0px 4px 20px 20px #111111;    
+            box-shadow: 0px 4px 20px 20px #000;    
         }
 
         span{
